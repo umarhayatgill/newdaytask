@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.newway.DiamondKataTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-15T20:39:24" hostname="MAC-MWFNP7962M" time="0.014">
+  <properties/>
+  <testcase name="generates_diamond_for_B_correctly()" classname="org.newway.DiamondKataTest" time="0.011"/>
+  <testcase name="handles_invalid_input_gracefully()" classname="org.newway.DiamondKataTest" time="0.0"/>
+  <testcase name="generates_diamond_for_A_correctly()" classname="org.newway.DiamondKataTest" time="0.001"/>
+  <testcase name="generates_diamond_for_C_correctly()" classname="org.newway.DiamondKataTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
