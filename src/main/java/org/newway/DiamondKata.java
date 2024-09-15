@@ -7,15 +7,15 @@ public class DiamondKata {
       return "Invalid input. Please enter a letter between A and Z.";
     }
 
-    StringBuilder diamond = new StringBuilder();
-    int n = letter - 'A';  // Calculate the number of rows above the center
+    final var diamond = new StringBuilder();
+    final var n = letter - 'A';  // Calculate the number of rows above the center
 
-    // Build top part of the diamond
+    // Build top part of the diamond including center
     for (int i = 0; i <= n; i++) {
       diamond.append(buildLine(i, n));
     }
 
-    // Build bottom part of the diamond
+    // Build bottom part of the diamond excluding center
     for (int i = n - 1; i >= 0; i--) {
       diamond.append(buildLine(i, n));
     }
@@ -24,22 +24,18 @@ public class DiamondKata {
   }
 
   private static String buildLine(int currentRow, int totalRows) {
-    StringBuilder line = new StringBuilder();
-    char currentLetter = (char) ('A' + currentRow);
+    final var line = new StringBuilder();
+    final var currentLetter = (char) ('A' + currentRow);
 
     // Add leading spaces
-    for (int i = 0; i < totalRows - currentRow; i++) {
-      line.append(" ");
-    }
+    line.append(" ".repeat(Math.max(0, totalRows - currentRow)));
 
     // Add first letter
     line.append(currentLetter);
 
     // Add spaces between letters if necessary
     if (currentRow > 0) {
-      for (int i = 0; i < 2 * currentRow - 1; i++) {
-        line.append(" ");
-      }
+      line.append(" ".repeat(Math.max(0, 2 * currentRow - 1)));
       // Add second letter
       line.append(currentLetter);
     }
@@ -49,10 +45,6 @@ public class DiamondKata {
     return line.toString();
   }
 
-  public static void main(String[] args) {
-    char input = 'C';
-    System.out.println(generateDiamond(input));
-  }
 }
 
 
